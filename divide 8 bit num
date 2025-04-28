@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<pic18f4550.h>
+#include<xc.h>
+
+void main(void) {
+    int quotient = 0;
+    int num1 = 0x12
+    ;
+    int num2 = 0x06;
+    
+    for(int i = num1; i >= num2; i -= num2) {
+        quotient++;
+    }
+    
+    TRISB = 0;
+    PORTB = quotient;
+}
